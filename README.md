@@ -1,12 +1,16 @@
-# SubBrute.py: Descobridor de Subdomínios Multithread
+# 🕵️‍♂️ SubBrute.py: Descobridor de Subdomínios Multithread
 
 ![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
+![Field: Cybersecurity](https://img.shields.io/badge/Field-Cybersecurity-orange.svg)
+![Focus: Recon](https://img.shields.io/badge/Focus-Recon-blueviolet.svg)
+![Red Team](https://img.shields.io/badge/Red-Team-darkred.svg)
+![Threat Intelligence](https://img.shields.io/badge/Threat-Intelligence-purple.svg)
+![Pentest](https://img.shields.io/badge/Pentest-Tool-black.svg)
+![Recon Automation](https://img.shields.io/badge/Recon-Automation-informational.svg)
 
-Uma ferramenta de linha de comando em Python, rápida e eficiente, para descobrir subdomínios existentes de um domínio alvo. Utiliza um ataque de força bruta com uma wordlist e o poder do multithreading para acelerar drasticamente o processo de busca.
+- Uma ferramenta de linha de comando em Python, rápida e eficiente, para descobrir subdomínios existentes de um domínio alvo. Utiliza um ataque de força bruta com uma wordlist e o poder do multithreading para acelerar drasticamente o processo de busca.
 
-## Principais Funcionalidades
+## 🛠️ Principais Funcionalidades
 
 -   🚀 **Alta Performance**: Utiliza um sistema de fila e múltiplos threads para realizar dezenas de consultas DNS simultaneamente.
 -   ⚙️ **Flexível**: Suporte para consulta de diferentes tipos de registros DNS (A, AAAA, MX, CNAME, etc.).
@@ -14,7 +18,7 @@ Uma ferramenta de linha de comando em Python, rápida e eficiente, para descobri
 -   🔧 **Customizável**: Permite ao usuário definir facilmente o número de threads para otimizar a performance de acordo com sua conexão.
 -   🛡️ **Robusto**: Tratamento de erros inteligente que distingue subdomínios não existentes de timeouts ou outras falhas de DNS.
 
-## Instalação
+## ⚙️ Instalação
 
 Você precisará do Python 3.7 ou superior instalado.
 
@@ -38,7 +42,7 @@ Você precisará do Python 3.7 ou superior instalado.
     pip install dnspython
     ```
 
-## Modo de Uso
+## 💻 Modo de Uso
 
 A sintaxe básica para executar o script é:
 
@@ -71,7 +75,7 @@ Argumentos opcionais:
 Exemplo de uso: python3 SubBrute.py -d google.com -w subdominios.txt -t 20
 ```
 
-## Exemplos de Uso
+## 🔧 Exemplos de Uso
 
 **1. Busca Básica**
 
@@ -98,7 +102,7 @@ python3 SubBrute.py -d example.com.br -w mail_servers.txt -r MX
 ```
 *(Nota: a wordlist `mail_servers.txt` poderia conter nomes como `mail`, `smtp`, `webmail`, `mx1`, etc.)*
 
-## Como Funciona
+## 🧠 Como Funciona
 
 O script utiliza um modelo de fila de trabalho para gerenciar as tarefas. A thread principal lê todos os subdomínios da wordlist e os adiciona a uma fila segura (`queue.Queue`). Em seguida, ela inicia um número configurável de "workers" (threads). Cada worker, de forma independente e simultânea, retira um item da fila, realiza a consulta DNS e registra o resultado se for bem-sucedido. Este paralelismo evita que o script fique ocioso esperando a resposta de uma única consulta, resultando em uma performance muito superior a uma abordagem sequencial.
 
@@ -108,6 +112,6 @@ Este projeto está licenciado sob a Licença MIT. Veja o arquivo `LICENSE` para 
 
 ---
 
-🛡️ Utilize com responsabilidade e sabedoria :)
+🛡️ Utilize com responsabilidade :)
 
 - Feito por **[Lucas Braga](https://github.com/LucasBragaCyber)** 🛡️
